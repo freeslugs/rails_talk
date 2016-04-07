@@ -79,6 +79,10 @@ Now if we run `Post.all` we will see our post.
 
 Let's destroy our `Post`: `Post.first.destroy`.
 
+#### MVC and Rails 
+
+MVC stands for Model View Controller. Here's a great overview of MVC in context of Rails: [betterexplained.com](http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controller)
+
 ## Bootstrap Rails 
 
 Gems are libraries for Ruby. We're going to use `twitter-bootstrap-rails` to add Bootstrap, a popular js and css framework, to our app. 
@@ -328,6 +332,11 @@ rake db:migrate
 rails s
 ```
 
+Check out some cool resources: 
+- [rspec](https://github.com/rspec/rspec-rails) for testing.
+- [Omniauth](https://github.com/intridea/omniauth) for social login.
 
 Sources:
+- http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
+- https://www.railstutorial.org/book/_single-page#sec-planning_the_application
 - https://docs.google.com/document/d/1HhWzMUwaoxYuAQiroAJkabTfaqaXMb4JA5c9bqLrUdI/edit?usp=sharing
