@@ -6,7 +6,9 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:image) %></th>
       <th><%= model_class.human_attribute_name(:content) %></th>
+      <th><%= model_class.human_attribute_name(:user) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -15,7 +17,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.id, post_path(post) %></td>
+        <td><%= image_tag post.image.url(:thumb) %></td>
         <td><%= post.content %></td>
+        <td><%= post.user.email if post.user %></td>
         <td><%=l post.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -30,6 +34,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @posts %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
