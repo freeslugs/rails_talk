@@ -331,6 +331,11 @@ Finally, migrate the database and run the server.
 rake db:migrate
 rails s
 ```
+#### if we have more time we'll do this: 
+- upvoting posts using [acts_as_votable](https://github.com/ryanto/acts_as_votable)
+- list users, profile pages show their posts. 
+- deploy to heroku 
+- write a test [or many tests]! hehehe. 
 
 Check out some cool resources: 
 - [rspec](https://github.com/rspec/rspec-rails) for testing.
